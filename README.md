@@ -8,6 +8,9 @@ The "Steady footing" mod prevents players from losing balance and accidentally d
 - Removes automatic item drop induced by balancing
 - No configuration needed, installs and works by default
 
+### Planned:
+- **Online multiplayer support** (compatibility untested, let me know if it works)
+
 ## Changelog
 
 ### 1.0
