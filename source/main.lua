@@ -8,15 +8,24 @@ meta = {
 
 local BEHAVIOR_TEETERING <const> = 0
 
+---@param entity Entity
+---@return boolean
+local function is_player(entity)
+  ---@diagnostic disable-next-line undefined-field
+  return entity ~= nil and entity.get_short_name ~= nil
+end
+
 -- ==============================================================================
 
-local function handle_level_start()
-  for _, player in ipairs(get_local_players()) do
-    local behavior = player:get_base_behavior(BEHAVIOR_TEETERING)
-    player:clear_behavior(behavior)
+---@param entity Entity
+local function on_spawn(entity)
+  if is_player(entity) then
+    ---@cast entity Player
+    local behavior = entity:get_base_behavior(BEHAVIOR_TEETERING)
+    entity:clear_behavior(behavior)
   end
 end
 
 -- ==============================================================================
 
-set_callback(handle_level_start, ON.LEVEL)
+set_post_entity_spawn(on_spawn, SPAWN_TYPE.ANY, MASK.ANY)
