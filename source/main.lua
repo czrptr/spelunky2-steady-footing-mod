@@ -1,7 +1,7 @@
 -- STEADY FOOTING MOD
 meta = {
   name = "Steady footing",
-  version = "1.0",
+  version = "1.1",
   description = "Never lose your balance, never drop your stuff",
   author = "Quasar",
 }
