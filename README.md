@@ -13,6 +13,10 @@ The "Steady footing" mod prevents players from losing balance and accidentally d
 
 ## Changelog
 
+### 1.1
+- **Fixed:**
+  - Functionality didn't work for players who died and respawned
+
 ### 1.0
 - **Added:**
   - Remove the balancing behavior observed for players standing at the edge of platforms
